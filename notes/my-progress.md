@@ -3,7 +3,7 @@
 ## Where I am
 
 - **Learning path stage:** 1. Concepts ✅ done · 2. Setup (mostly done)
-- **Next up:** Hands-on: commit and push my FAQ + progress notes, then open my first pull request.
+- **Next up:** Review and merge my first pull request (#1), then pull the updated `main`.
 
 ---
 
@@ -45,3 +45,24 @@
 
 **What confused me**
 - Jumping into commands before knowing the concepts. Lesson for the team training: **teach concepts before commands.**
+
+### 2026-11-06: My first commit, push and pull request
+
+**What I did**
+1. `cd ~/code/sales-claude-training`: went into the project folder.
+2. `git status`: saw my new files in red (untracked).
+3. `git add notes training`: put them "in the envelope" (now green).
+4. `git config --global user.name / user.email`: told Git who I am (one-time setup).
+5. `git commit -m "..."`: saved a version on my Mac.
+6. `git push -u origin docs/setup-faq-and-progress`: sent my branch to GitHub.
+7. Opened pull request #1 on the GitHub website.
+
+**What confused me**
+- I first mixed up commit and push. Commit = save on my Mac; push = send to GitHub.
+- First commit needs your name/email set up, or Git refuses. Add to FAQ for the team.
+
+**Quick check:** 2/4. Got name/email setup and "review before merge" right.
+- Mixed up **add** vs. **commit**: green in `git status` = *staged* (in the envelope), **not** committed yet.
+- Mixed up **commit** vs. **push**: if a commit is missing on GitHub, the missing step is `git push`.
+- Memory aid: **add = choose · commit = save (my Mac) · push = send (GitHub)**.
+- For the team training: these three are the hardest to keep apart. Spend extra time here.
