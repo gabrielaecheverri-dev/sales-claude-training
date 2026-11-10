@@ -2,8 +2,8 @@
 
 ## Where I am
 
-- **Learning path stage:** 1. Concepts ✅ done · 2. Setup (mostly done)
-- **Next up:** Review and merge my first pull request (#1), then pull the updated `main`.
+- **Learning path stage:** 1. Concepts ✅ · 2. Setup ✅ · 4. GitHub basics ✅ (first full cycle done)
+- **Next up:** 3. Daily basics in Claude Code (asking Claude to create/edit files, reviewing and approving changes, slash commands, what `CLAUDE.md` does). Practice the full cycle again on a new branch: add the 2 pending FAQ entries (one-time name/email setup; forgetting quotes in commit messages).
 
 ---
 
@@ -66,3 +66,24 @@
 - Mixed up **commit** vs. **push**: if a commit is missing on GitHub, the missing step is `git push`.
 - Memory aid: **add = choose · commit = save (my Mac) · push = send (GitHub)**.
 - For the team training: these three are the hardest to keep apart. Spend extra time here.
+
+### 2026-11-09: Second round (I led it) + first merge
+
+**What I did**
+- Committed and pushed my notes update myself: it joined pull request #1 automatically.
+- Asked for (and added) `training/cheat-sheet.md` with every Terminal command.
+- Reviewed **Files changed**, merged pull request #1, deleted the branch on GitHub.
+- Back on my Mac: `git switch main` → `git pull` to get the merged version.
+
+**What confused me**
+- Forgot the quotes in `git commit -m`. Git read only the first word and saved nothing. Add to FAQ.
+- Remember: commits join the PR when you **push**; **merge** adds the whole PR to `main`.
+
+**Good to know**
+- After `git switch main`, files from my branch "disappear" until I `git pull`. That's normal.
+
+**Quick check (full cycle):** 1 of 3 mostly right. Review these before the next lesson:
+- `cd` goes into a **folder**, not a branch. Branches are changed with `git switch`.
+- `git status` only **looks** at my Mac; it doesn't download anything. To get the latest: `git switch main` → `git pull`.
+- Fixes after review: **don't** open a new pull request. Fix → add → commit → push on the **same branch**, and it joins the existing one.
+- **pull ≠ pull request.** `git pull` = download the latest from GitHub. Pull request = ask for review on GitHub. Confusing names! Add to the glossary/FAQ for the team.

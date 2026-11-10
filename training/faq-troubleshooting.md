@@ -54,3 +54,65 @@ zsh: command not found: gh
 ```
 
 > **If something goes wrong:** Check whether GitHub is having an outage at [githubstatus.com](https://www.githubstatus.com). If it is, wait 10–15 minutes and try again.
+
+---
+
+## Saving your work (commits)
+
+### Git refuses your first commit: "Please tell me who you are"
+
+**What you see:** You run `git commit` for the first time on your Mac and get:
+
+```
+Author identity unknown
+
+*** Please tell me who you are.
+```
+
+**What went wrong:** Every saved version (commit) is signed with a name and email, so the team can see who changed what. Git doesn't know yours yet. It's like sending your first email from a new account before setting up your signature.
+
+**How to fix it (only once per Mac):**
+
+1. In Terminal, run these one at a time, with your own name and work email:
+
+   ```
+   git config --global user.name "Your Name"
+   ```
+
+   ```
+   git config --global user.email "you@company.com"
+   ```
+
+   **What you should see:** nothing. No message means it worked.
+
+2. Run your `git commit` command again.
+
+**What you should see:** `1 file changed...` (or however many files you changed).
+
+> **If something goes wrong:** Check for typos, especially the two dashes in `--global` and the quotes around your name.
+
+---
+
+### You forgot the quotes in your commit message
+
+**What you see:** You typed something like `git commit -m Add discovery call template` (no quotes), and Git shows an error such as:
+
+```
+error: pathspec 'discovery' did not match any file(s) known to git
+```
+
+**What went wrong:** Without quotes, Git reads only the **first word** (`Add`) as your note and thinks the other words are file names. It gets confused and **saves nothing**. It's like a subject line that cuts off after one word, with the rest scattered around the email.
+
+**Why the quotes matter:** they tell Git "everything in here is one note".
+
+**How to fix it:**
+
+1. Nothing is broken and nothing was saved, so just run the command again **with quotes**:
+
+   ```
+   git commit -m "Add discovery call template"
+   ```
+
+**What you should see:** `1 file changed...`
+
+> **If something goes wrong:** Run `git status`. If your files show in **red**, they're not in the envelope. Run `git add` on them first, then commit again.
