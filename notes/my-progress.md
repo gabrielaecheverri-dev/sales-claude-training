@@ -2,8 +2,8 @@
 
 ## Where I am
 
-- **Learning path stage:** 1. Concepts ✅ done · 2. Setup (mostly done)
-- **Next up:** Review and merge my first pull request (#1), then pull the updated `main`.
+- **Learning path stage:** 1. Concepts ✅ · 2. Setup ✅ · 3. Daily basics in Claude Code ✅ · 4. GitHub basics ✅
+- **Next up:** Push branch `faq-more-entries` and open/merge pull request #2. Then **5. Team collaboration** (sharing one repo, simple conflicts, folder conventions).
 
 ---
 
@@ -66,3 +66,44 @@
 - Mixed up **commit** vs. **push**: if a commit is missing on GitHub, the missing step is `git push`.
 - Memory aid: **add = choose · commit = save (my Mac) · push = send (GitHub)**.
 - For the team training: these three are the hardest to keep apart. Spend extra time here.
+
+### 2026-11-09: Second round (I led it) + first merge
+
+**What I did**
+- Committed and pushed my notes update myself: it joined pull request #1 automatically.
+- Asked for (and added) `training/cheat-sheet.md` with every Terminal command.
+- Reviewed **Files changed**, merged pull request #1, deleted the branch on GitHub.
+- Back on my Mac: `git switch main` → `git pull` to get the merged version.
+
+**What confused me**
+- Forgot the quotes in `git commit -m`. Git read only the first word and saved nothing. Add to FAQ.
+- Remember: commits join the PR when you **push**; **merge** adds the whole PR to `main`.
+
+**Good to know**
+- After `git switch main`, files from my branch "disappear" until I `git pull`. That's normal.
+
+**Quick check (full cycle):** 1 of 3 mostly right. Review these before the next lesson:
+- `cd` goes into a **folder**, not a branch. Branches are changed with `git switch`.
+- `git status` only **looks** at my Mac; it doesn't download anything. To get the latest: `git switch main` → `git pull`.
+- Fixes after review: **don't** open a new pull request. Fix → add → commit → push on the **same branch**, and it joins the existing one.
+- **pull ≠ pull request.** `git pull` = download the latest from GitHub. Pull request = ask for review on GitHub. Confusing names! Add to the glossary/FAQ for the team.
+
+### 2026-11-10: Lesson 3, daily basics in Claude Code
+
+**What I learned**
+- **Session** = one conversation, inside **one folder**. One topic per session.
+- **Asking for changes:** plain words. Say **which file**, **what** to change, **who it's for**, **what format**.
+- **Reviewing:** always before committing. Open the file, or `git diff` in Terminal (Space to scroll, q to quit).
+- **Permission prompts:** Allow if I understand it and asked for it; if in doubt, Deny and ask.
+- **Slash commands:** typed in the **Claude chat box**, not Terminal. `/help`, `/rewind` (= `/undo`), `/clear`, `/usage`, `/memory`, `/init`.
+- **CLAUDE.md** = standing instructions Claude reads every session; shared with the team through GitHub.
+- Practiced: started branch `faq-more-entries`, briefed Claude to add 2 FAQ entries, reviewed, committed.
+
+**What confused me**
+- Typed `/` in **Terminal** → "permission denied". Slash commands go in the Claude chat box. Added to FAQ.
+- Step 2 of the exercise ("write me a request") wasn't clear: I didn't realize I just had to type it in the chat. For the team: show an example request first.
+
+**Quick check:** 1 of 4 fully right, 3 partly.
+- Undo options: tell Claude "undo that" / ask for a fix, or `/rewind` (`/undo`). `git diff` only **shows** changes; it doesn't undo.
+- Repeated instructions → put them in **`CLAUDE.md`**.
+- A good request also names the **file** and **exactly what to change**, not just audience and style.
