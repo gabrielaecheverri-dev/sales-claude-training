@@ -2,8 +2,8 @@
 
 ## Where I am
 
-- **Learning path stage:** 1. Concepts ✅ · 2. Setup ✅ · 4. GitHub basics ✅ (first full cycle done)
-- **Next up:** 3. Daily basics in Claude Code (asking Claude to create/edit files, reviewing and approving changes, slash commands, what `CLAUDE.md` does). Practice the full cycle again on a new branch: add the 2 pending FAQ entries (one-time name/email setup; forgetting quotes in commit messages).
+- **Learning path stage:** 1. Concepts ✅ · 2. Setup ✅ · 3. Daily basics in Claude Code ✅ · 4. GitHub basics ✅
+- **Next up:** Push branch `faq-more-entries` and open/merge pull request #2. Then **5. Team collaboration** (sharing one repo, simple conflicts, folder conventions).
 
 ---
 
@@ -87,3 +87,23 @@
 - `git status` only **looks** at my Mac; it doesn't download anything. To get the latest: `git switch main` → `git pull`.
 - Fixes after review: **don't** open a new pull request. Fix → add → commit → push on the **same branch**, and it joins the existing one.
 - **pull ≠ pull request.** `git pull` = download the latest from GitHub. Pull request = ask for review on GitHub. Confusing names! Add to the glossary/FAQ for the team.
+
+### 2026-11-10: Lesson 3, daily basics in Claude Code
+
+**What I learned**
+- **Session** = one conversation, inside **one folder**. One topic per session.
+- **Asking for changes:** plain words. Say **which file**, **what** to change, **who it's for**, **what format**.
+- **Reviewing:** always before committing. Open the file, or `git diff` in Terminal (Space to scroll, q to quit).
+- **Permission prompts:** Allow if I understand it and asked for it; if in doubt, Deny and ask.
+- **Slash commands:** typed in the **Claude chat box**, not Terminal. `/help`, `/rewind` (= `/undo`), `/clear`, `/usage`, `/memory`, `/init`.
+- **CLAUDE.md** = standing instructions Claude reads every session; shared with the team through GitHub.
+- Practiced: started branch `faq-more-entries`, briefed Claude to add 2 FAQ entries, reviewed, committed.
+
+**What confused me**
+- Typed `/` in **Terminal** → "permission denied". Slash commands go in the Claude chat box. Added to FAQ.
+- Step 2 of the exercise ("write me a request") wasn't clear: I didn't realize I just had to type it in the chat. For the team: show an example request first.
+
+**Quick check:** 1 of 4 fully right, 3 partly.
+- Undo options: tell Claude "undo that" / ask for a fix, or `/rewind` (`/undo`). `git diff` only **shows** changes; it doesn't undo.
+- Repeated instructions → put them in **`CLAUDE.md`**.
+- A good request also names the **file** and **exactly what to change**, not just audience and style.

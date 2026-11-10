@@ -57,6 +57,27 @@ zsh: command not found: gh
 
 ---
 
+### "permission denied" or "command not found" when talking to Claude
+
+**What you see:** You typed a request or a slash command (like `/help`) and Terminal replied with something like:
+
+```
+zsh: permission denied: /
+```
+
+**What went wrong:** You typed it in **Terminal** instead of the **Claude app's message box**. Terminal only understands commands like `git status`, not requests to Claude. Nothing broke.
+
+| Window | What you type there |
+|---|---|
+| **Terminal** (the window with `%`) | Git commands: `git status`, `git add`, `git commit`, `git push` |
+| **Claude app** message box | Requests to Claude, and slash commands like `/help` |
+
+**How to fix it:** Click into the Claude app's message box and type it there.
+
+**What you should see:** for a slash command, a menu of commands appears as soon as you type `/`.
+
+---
+
 ## Saving your work (commits)
 
 ### Git refuses your first commit: "Please tell me who you are"
